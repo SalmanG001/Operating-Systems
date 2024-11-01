@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
@@ -26,7 +27,7 @@ void shell_loop() {
             perror("Fork failed");
         } else if (pid == 0) {
             execvp(args[0], args);
-            perror("Execution failed");
+            perror("Execution failed of PUCIT SHELL");
             exit(EXIT_FAILURE);
         } else {
             wait(NULL); 
