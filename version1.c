@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
-#define MAX_INPUT 1024  // Maximum length for user input
+#define MAX_INPUT 1024  
 
 int main() {
     char command[MAX_INPUT];  // To store the user's command
