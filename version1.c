@@ -40,7 +40,7 @@ int main() {
         } else if (pid == 0) {
             // Child process: execute the command
             execvp(args[0], args);
-            perror("Command not found");  // Print error if exec fails
+            perror("Command not Found");  // Print error if exec fails
             exit(EXIT_FAILURE);           // Exit child process on failure
         } else {
             // Parent process: wait for the child to finish
@@ -50,3 +50,6 @@ int main() {
 
     return 0;
 }
+
+
+
