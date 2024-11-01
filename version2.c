@@ -2,6 +2,11 @@
 #include <unistd.h>
 
 void execute_with_redirection(char *command) {
+    char *args[100];
+    int i = 0, in_fd, out_fd;
+    int redir_in = 0, redir_out = 0;
+
+    args[i] = strtok(command, " ");
     while (args[i] != NULL) args[++i] = strtok(NULL, " ");
 
     for (int j = 0; j < i; j++) {
